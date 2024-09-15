@@ -1,10 +1,10 @@
 from collections import defaultdict
 grouped_data = defaultdict(int)
-with open('IPS_Manager_Version_1725341949012.csv', 'r',encoding='utf-8-sig') as fp: #The utf-8-sig encoding is used to handle files that start with a Byte Order Mark (BOM). It's common in CSV files exported from Microsoft Excel and helps ensure the encoding is interpreted correctly.
+with open('123.csv', 'r',encoding='utf-8-sig') as fp: #The utf-8-sig encoding is used to handle files that start with a Byte Order Mark (BOM). It's common in CSV files exported from Microsoft Excel and helps ensure the encoding is interpreted correctly.
     rows = csv.DictReader(fp)
     for entry in rows:
-        version = entry['IPS Manager Version']
-        count = int(entry['Manager Count'])
+        version = entry['Version']
+        count = int(entry['Count'])
         grouped_data[version] += count
 
 
